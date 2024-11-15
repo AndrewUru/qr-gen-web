@@ -1,0 +1,98 @@
+<div class="form-container">
+    <h2 class="form-title">Email QR Code</h2>
+    <form method="POST" action="/email">
+        <div class="input-wrapper">
+            <label>Send Email To:</label>
+            <input type="email" name="email" value="{{ request.form.get('email', '') }}" 
+                   placeholder="recipient@example.com" required>
+        </div>
+
+        <div class="input-wrapper">
+            <label>Subject (Optional)</label>
+            <input type="text" name="subject" value="{{ request.form.get('subject', '') }}" 
+                   placeholder="Email subject">
+        </div>
+
+        <div class="input-wrapper">
+            <label>Pre-written Message (Optional)</label>
+            <textarea name="message" placeholder="Type your message here" rows="5">{{ request.form.get('message', '') }}</textarea>
+            <small class="helper-text">This message will be pre-filled in the email client</small>
+        </div>
+
+        <button type="submit" class="generate-btn">Generate Email QR Code</button>
+    </form>
+</div>
+
+<style>
+    .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .form-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .input-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .input-wrapper label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .input-wrapper input[type="email"],
+    .input-wrapper input[type="text"],
+    .input-wrapper textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+        font-family: inherit;
+    }
+
+    .input-wrapper textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .input-wrapper input:focus,
+    .input-wrapper textarea:focus {
+        border-color: #00b3ff;
+        box-shadow: 0 0 0 2px rgba(0,179,255,0.1);
+    }
+
+    .helper-text {
+        display: block;
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .generate-btn {
+        background: #00b3ff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+    }
+
+    .generate-btn:hover {
+        background: #0099e6;
+    }
+</style>

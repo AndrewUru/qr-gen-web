@@ -1,0 +1,155 @@
+<div class="form-container">
+    <h2 class="form-title">WhatsApp QR Code</h2>
+    <form method="POST" action="/whatsapp">
+        <div class="phone-input-group">
+            <label>Phone Number with Country Code</label>
+            <div class="phone-input-wrapper">
+                <div class="country-code-input">
+                    <span class="plus">+</span>
+                    <input type="tel" name="country_code" placeholder="91" 
+                           pattern="[0-9]+" required maxlength="4">
+                </div>
+                <input type="tel" name="phone" class="phone-number-input" 
+                       placeholder="Phone number" pattern="[0-9]+" required>
+            </div>
+            <small class="helper-text">Example: Country Code: 91, Phone: 9876543210</small>
+        </div>
+
+        <div class="input-group">
+            <label>Message (Optional)</label>
+            <textarea name="message" placeholder="Type your pre-set message here" rows="4"></textarea>
+            <small class="helper-text">This message will be pre-filled in WhatsApp</small>
+        </div>
+
+        <button type="submit" class="generate-btn">Generate WhatsApp QR Code</button>
+    </form>
+</div>
+
+<style>
+    .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .form-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .input-group, .phone-input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label, .phone-input-group label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .phone-input-wrapper {
+        display: flex;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .country-code-input {
+        display: flex;
+        align-items: center;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 0 5px;
+        min-width: 80px;
+    }
+
+    .country-code-input:focus-within {
+        border-color: #00b3ff;
+        box-shadow: 0 0 0 2px rgba(0,179,255,0.1);
+    }
+
+    .plus {
+        color: #666;
+        font-size: 16px;
+        padding: 0 5px;
+    }
+
+    .country-code-input input {
+        border: none;
+        outline: none;
+        width: 50px;
+        padding: 12px 5px;
+        font-size: 16px;
+    }
+
+    .phone-number-input {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    .input-group input[type="tel"],
+    .input-group textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    .input-group textarea {
+        resize: vertical;
+        min-height: 100px;
+        font-family: inherit;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus,
+    .phone-number-input:focus {
+        border-color: #00b3ff;
+        box-shadow: 0 0 0 2px rgba(0,179,255,0.1);
+    }
+
+    .helper-text {
+        display: block;
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .generate-btn {
+        background: #25D366;  /* WhatsApp green */
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .generate-btn:hover {
+        background: #128C7E;  /* Darker WhatsApp green */
+    }
+
+    /* Remove spinner buttons from number inputs */
+    input[type="tel"]::-webkit-outer-spin-button,
+    input[type="tel"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="tel"] {
+        -moz-appearance: textfield;
+    }
+</style>

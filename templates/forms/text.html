@@ -1,0 +1,99 @@
+<div class="form-container">
+    <h2 class="form-title">Text QR Code</h2>
+    <form method="POST">
+        <div class="input-group">
+            <label>Enter Text</label>
+            <textarea name="text" rows="8" placeholder="Enter your text here..." required></textarea>
+            <small class="helper-text">Enter any text you want to convert to QR code</small>
+        </div>
+        <button type="submit" class="generate-btn">Generate QR Code</button>
+    </form>
+</div>
+
+<style>
+    .form-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: inherit;
+        resize: vertical;
+        min-height: 150px;
+        line-height: 1.5;
+    }
+
+    textarea:focus {
+        outline: none;
+        border-color: #00b3ff;
+        box-shadow: 0 0 0 2px rgba(0,179,255,0.1);
+    }
+
+    .helper-text {
+        display: block;
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .generate-btn {
+        background: #00b3ff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+    }
+
+    .generate-btn:hover {
+        background: #0099e6;
+    }
+
+    /* Word count feature if you want to add it */
+    .word-count {
+        text-align: right;
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+</style>
+
+<script>
+    // Optional: Add word/character count
+    const textarea = document.querySelector('textarea');
+    textarea.addEventListener('input', function() {
+        const text = this.value;
+        const words = text.trim().split(/\s+/).length;
+        const chars = text.length;
+        
+        // If you want to add word count display:
+        // document.querySelector('.word-count').textContent = `${words} words, ${chars} characters`;
+    });
+</script>

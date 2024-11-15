@@ -1,0 +1,131 @@
+<div class="form-container">
+    <h2 class="form-title">WiFi QR Code</h2>
+    <form method="POST">
+        <div class="input-group">
+            <label>Network Name (SSID)</label>
+            <input type="text" name="ssid" placeholder="Enter WiFi name" required>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter WiFi password">
+        </div>
+
+        <div class="input-group">
+            <label>Encryption Type</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="encryption" value="WPA" checked>
+                    <span>WPA/WPA2</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="encryption" value="WEP">
+                    <span>WEP</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="encryption" value="nopass">
+                    <span>None</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox-option">
+                <input type="checkbox" name="hidden">
+                <span>Hidden Network</span>
+            </label>
+            <i class="fas fa-question-circle" title="Check if your network is hidden"></i>
+        </div>
+
+        <button type="submit" class="generate-btn">Generate WiFi QR Code</button>
+    </form>
+</div>
+
+<style>
+    .form-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .input-group input:focus {
+        outline: none;
+        border-color: #00b3ff;
+        box-shadow: 0 0 0 2px rgba(0,179,255,0.1);
+    }
+
+    .radio-group {
+        display: flex;
+        gap: 20px;
+        margin-top: 5px;
+    }
+
+    .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .checkbox-group {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .checkbox-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .fa-question-circle {
+        color: #999;
+        cursor: help;
+    }
+
+    .generate-btn {
+        background: #00b3ff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+    }
+
+    .generate-btn:hover {
+        background: #0099e6;
+    }
+</style>
