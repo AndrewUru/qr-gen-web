@@ -130,7 +130,7 @@ For support, please open an issue in the repository or contact [your-email].
 
 ## Screenshots 📸
 
-[Add screenshots of your application here]
+<img width="945" alt="{64CF6B54-1F74-4CB7-945C-6943E7FDBC9D}" src="https://github.com/user-attachments/assets/2353285f-0d52-40fa-a1e9-ea85c8930dad">
 
 ---
-Made with ❤️ by [Your Name]
+Made with ❤️ by Abhiyan P A
