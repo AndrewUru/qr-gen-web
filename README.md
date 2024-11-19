@@ -1,136 +1,43 @@
-# QR Code Generator Web App 🚀
+RD Soluciones Digitales: Proyecto de Portafolio
+Este proyecto utiliza el Astro Starter Kit: Portfolio como base para desarrollar un portafolio profesional que represente los servicios y soluciones de RD Soluciones Digitales. Está diseñado para ser rápido, moderno y adaptable a diferentes dispositivos, ideal para mostrar proyectos y habilidades de manera impactante.
 
-A modern, responsive web application for generating QR codes with multiple formats support. Built with Flask and modern web technologies.
+🚀 Instalación y Configuración
+Sigue estos pasos para poner en marcha el proyecto:
 
-## Features ✨
+Clona este repositorio en tu máquina local:
+sh
+Copiar código
+git clone https://github.com/tuusuario/rd-soluciones-digitales.git
+cd rd-soluciones-digitales
+Instala las dependencias:
+sh
+Copiar código
+npm install
+Inicia el servidor de desarrollo:
+sh
+Copiar código
+npm run dev
+Accede al sitio localmente en http://localhost:4321.
+🛠 Comandos Disponibles
+Comando	Acción
+npm install	Instala las dependencias
+npm run dev	Inicia el servidor local de desarrollo
+npm run build	Genera el sitio en producción en ./dist/
+npm run preview	Visualiza el sitio generado localmente
+npm run astro ...	Ejecuta comandos CLI de Astro
+npm run astro -- --help	Muestra ayuda para usar el CLI de Astro
+📸 Vista Previa del Portafolio
 
-- **Multiple QR Code Types Support**:
-  - 🔗 URL QR Codes
-  - 📶 WiFi Network QR Codes
-  - 📧 Email QR Codes
-  - 📱 WhatsApp QR Codes
-  - 📝 Text QR Codes
 
-- **Modern UI/UX**:
-  - 🌓 Dark/Light Theme Toggle
-  - 📱 Responsive Design
-  - 🎨 Clean and Modern Interface
-  - ⚡ Real-time QR Code Generation
+✨ Tecnologías Utilizadas
+Este proyecto está construido con las siguientes herramientas y tecnologías:
 
-## Tech Stack 💻
+HTML, CSS, JavaScript: Bases del desarrollo web.
+Astro: Framework moderno para construir sitios web rápidos.
+TailwindCSS: Estilizado eficiente y personalizable.
+Integración Headless CMS: Posibilidades para futuras expansiones con WordPress y APIs REST.
+🌐 Sobre RD Soluciones Digitales
+RD Soluciones Digitales es un proyecto enfocado en ofrecer soluciones web modernas, eficientes y adaptadas a las necesidades del cliente. Basándonos en frameworks como React, Astro y WordPress, garantizamos resultados funcionales y estéticamente atractivos.
 
-- **Backend**: Python Flask
-- **Frontend**: HTML, CSS, JavaScript
-- **QR Generation**: qrcode library
-- **Icons**: Font Awesome
+Para más información, visita nuestro sitio web: www.elsaltoweb.es.
 
-## Installation 🛠️
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/qr-code-generator.git
-cd qr-code-generator
-```
-
-2. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Run the application:
-```bash
-python app.py
-```
-
-5. Open your browser and navigate to:
-```
-http://localhost:5000
-```
-
-## Project Structure 📁
-
-```
-web/
-├── static/
-│   └── qrcodes/          # Generated QR codes storage
-├── templates/
-│   ├── forms/            # Form templates for different QR types
-│   │   ├── url.html
-│   │   ├── wifi.html
-│   │   ├── email.html
-│   │   └── text.html
-│   └── qr.html          # Main template
-├── app.py               # Flask application
-└── requirements.txt     # Project dependencies
-```
-
-## Usage 📝
-
-1. Select QR code type from the top navigation
-2. Fill in the required information
-3. Click "Generate QR Code"
-4. Download or scan your QR code
-
-## Features by Type 🎯
-
-### URL QR Codes
-- Direct link generation
-- Automatic URL formatting
-- Support for all URL types
-
-### WiFi QR Codes
-- Network name (SSID)
-- Password protection
-- Encryption type selection (WPA/WEP/None)
-- Hidden network support
-
-### Email QR Codes
-- Email address
-- Subject line
-- Pre-written message
-- Direct email client opening
-
-### WhatsApp QR Codes
-- Phone number with country code
-- Pre-written message
-- Direct WhatsApp opening
-
-### Text QR Codes
-- Plain text support
-- Multi-line capability
-- Unicode support
-
-## Contributing 🤝
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments 👏
-
-- QR Code library: [python-qrcode](https://github.com/lincolnloop/python-qrcode)
-- Font Awesome for icons
-- Flask framework
-
-## Support 🆘
-
-For support, please open an issue in the repository or contact contact@abhiyanpa.in.
-
-## Screenshots 📸
-
-<img width="945" alt="{64CF6B54-1F74-4CB7-945C-6943E7FDBC9D}" src="https://github.com/user-attachments/assets/2353285f-0d52-40fa-a1e9-ea85c8930dad">
-
----
-Made with ❤️ by Abhiyan P A
