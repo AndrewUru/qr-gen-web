@@ -1,4 +1,4 @@
-RD Soluciones Digitales: Proyecto de Portafolio
+Proyecto de Portafolio
 Este proyecto utiliza el Astro Starter Kit: Portfolio como base para desarrollar un portafolio profesional que represente los servicios y soluciones de RD Soluciones Digitales. Está diseñado para ser rápido, moderno y adaptable a diferentes dispositivos, ideal para mostrar proyectos y habilidades de manera impactante.
 
 🚀 Instalación y Configuración
